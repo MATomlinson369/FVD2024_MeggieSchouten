@@ -1,30 +1,20 @@
 
-/* root */
+
 
 
 
 body{
     margin: 0;
     padding: 0;
+    
 }
-
-
-
-
-
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-  
-    /* Font size variables for different font size modes */
-    --base-font-size: 16px;
-    --heading-font-size: 24px;
-    --button-font-size: 14px;
+/*dark light mode bron: David Bijl*/
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
   }
-
-body:has(input[value="dark"]:checked) {
+  body:has(input[value="dark"]:checked) {
     --background-color: #121212;
     --text-color: #ffffff;
     --primary-color: #bb86fc;
@@ -37,17 +27,22 @@ body:has(input[value="dark"]:checked) {
   background-color: white;
     --text-color: black;
     
+  }
+
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+  
+    /* Font size variables for verschillende font size modes  bron: david bijl*/ 
    
-
+    --base-font-size: 16px;
+    --heading-font-size: 24px;
+    --button-font-size: 14px;
   }
 
-
-
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: var(--base-font-size);
-  }
   
   h1, h2, h3 {
     font-size: var(--heading-font-size);
@@ -156,7 +151,7 @@ header ul li:last-of-type input{
 header ul li:last-of-type button{
     padding: 0;
     border: none;
-    border-radius: none;
+    
     height: 3em;
 }
 
@@ -239,22 +234,15 @@ header ul:nth-of-type(2) li:nth-of-type(2) {
 }
 .navbutton img{
     width: 12vw;
-    
-   
+
    
 }
-
-
-
 
 
 header .hamburger-nav.toonMenu {
     transform: translate(0%, 0%);
 
   }
-
-
-
  
   #open-menu{
     width: 10vw;
@@ -310,6 +298,10 @@ header .hamburger-nav ul {
     color: red;
   }
 
+  .hamburger-nav{
+    font-family: sans-serif;
+  }
+
   header .hamburger-nav > div img {
     height: 50px;
     width: auto;
@@ -323,14 +315,53 @@ header .hamburger-nav ul {
     
 }
 
-.hamburger-nav ul:nth-of-type(2) {
-    list-style: none;
+.hamburger-nav #sluit-menu{
+    background-color: red;
+    color: white;
+    border: none;
+    width: 20vw;
+    
 }
 
+.hamburger-nav section:nth-of-type(1) ul{
+    display: flex;
+    flex-direction: column;
+    
+}
 
+.hamburger-nav section:nth-of-type(1) ul li{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
 
+.hamburger-nav section:nth-of-type(2) li a {
+    
+   font-size: 16px;
+     
+}
 
-.hamburger-nav a::after{
+  .hamburger-nav section:nth-of-type(2) ul {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .hamburger-nav section:nth-of-type(2) ul li {
+    padding: 1em;
+    border-bottom: 1px solid grey;
+    color: #000000;
+    margin: .5em;
+  }
+  
+  .hamburger-nav section:nth-of-type(2) ul li a {
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  
+  .hamburger-nav section:nth-of-type(2) ul li a::after {
     position: absolute;
     content: '';
     background-image: url(/images/kruidvatarrow_1.png);
@@ -340,18 +371,11 @@ header .hamburger-nav ul {
     width: 30px;
     height: 30px;
     
+  
     top: 50%;
     transform: translate(-50%, -50%);
     right: 0;
-    
- }
-
-
-
-
-  
-
-  
+  }
 
 /* Carousel */
 
@@ -446,9 +470,7 @@ header .hamburger-nav ul {
     margin: 0.5em;
     
     margin-top: 30px;
-    padding: 0.5em;
-
-    
+    padding: 0.5em; 
 
 }
 .reclameblok h2{
@@ -725,9 +747,6 @@ h2{
         width: max-content;
         margin-left: 1em;
     }
-
-
-
      
      .reclameblok2 section button {
         order: 8;
@@ -793,9 +812,7 @@ h2{
         box-sizing: border-box;
         border: 2px solid black;
         padding: 1em;
-       
-       
-        
+  
         
      }
      .koko img{
@@ -957,10 +974,7 @@ h2{
         display: flex;
         border: 2px solid black;
         position: relative;
-        
-        
-        
-        
+  
     }
 
     .nieuwsbrief ul li:first-of-type::before{
@@ -977,9 +991,6 @@ h2{
     }
 
 
-
-   
-
     .nieuwsbrief ul li:first-of-type input{
         width: 100%;
         padding: 0;
@@ -993,12 +1004,10 @@ h2{
        
     } 
 
-    
-  
     .nieuwsbrief button{
     padding: 0;
     border: none;
-    border-radius: none;
+    
     height: 3em;
     margin: 0;
     }
@@ -1013,19 +1022,12 @@ h2{
         width: 100vw;
         
     }
-
-    
-
     footer ul{
         list-style-type: none;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12px;
        padding: 0%;
-        
-       
-       
-        
-        
+ 
         }
 
         footer li{
@@ -1069,12 +1071,9 @@ h2{
         color: #111;
         text-decoration: none;
        margin-bottom: .5em;
-       margin-top: 1em;
-
-        
+       margin-top: 1em;  
      }
     
-     
      details summary{
         position: relative;
         font-weight: bold;
@@ -1091,11 +1090,8 @@ h2{
         
         top: 50%;
         transform: translate(-50%, -50%);
-        right: 0;
-        
+        right: 0; 
      }
-
-    
 
      .button3::after{
         content: ">";
@@ -1105,7 +1101,6 @@ h2{
          display: inline-block; 
          padding: 5px; 
          margin-bottom: 15px;
-        
      }
         
 
